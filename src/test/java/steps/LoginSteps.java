@@ -52,6 +52,8 @@ public class LoginSteps {
 
     @When("^I log in with \"([^\"]*)\" and password as \"([^\"]*)\"$")
     public void iLogInWithAndPasswordAs(String emailId, String passWord) throws Throwable {
+        WebDriverWait wait = new WebDriverWait(driver, 60);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("input_email")));
         driver.findElement(By.id("input_email")).sendKeys(emailId);
         driver.findElement(By.id("input_password")).sendKeys(passWord);
         driver.findElement(By.id("button_signin")).click();
