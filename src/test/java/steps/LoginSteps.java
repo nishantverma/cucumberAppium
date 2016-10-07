@@ -18,22 +18,6 @@ public class LoginSteps {
 
     protected AndroidDriver driver;
 
-    public LoginSteps() throws MalformedURLException {
-
-        File appDir = new File("app");
-        File app = new File(appDir, "app-staging-release.apk");
-        DesiredCapabilities capabilities = new DesiredCapabilities();
-
-        //mandatory capabilities
-        capabilities.setCapability("deviceName", "Android");
-        capabilities.setCapability("platformName", "Android");
-
-        //other caps
-        capabilities.setCapability("app", app.getAbsolutePath());
-
-        this.driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
-    }
-
     @Given("^I am on the Go-Jek app log in page$")
     public void iAmOnTheGoJekAppLogInPage() throws Throwable {
 
