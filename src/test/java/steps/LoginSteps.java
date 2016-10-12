@@ -6,9 +6,7 @@ import cucumber.api.java.en.When;
 import pages.HomePage;
 import pages.LoginPage;
 
-import static steps.StartingSteps.driver;
-
-public class LoginSteps {
+public class LoginSteps extends BaseSteps {
 
     @Given("^I am on the Go-Jek app log in page$")
     public void iAmOnTheGoJekAppLogInPage() throws Throwable {

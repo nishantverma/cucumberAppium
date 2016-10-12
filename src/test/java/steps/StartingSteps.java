@@ -12,9 +12,7 @@ import java.net.URL;
 /**
  * Created by nishant on 12/10/16.
  */
-public class StartingSteps {
-
-    protected static AndroidDriver driver;
+public class StartingSteps extends BaseSteps {
 
     @Before
     public void initializeAppiumSession() throws MalformedURLException {
