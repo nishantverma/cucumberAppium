@@ -9,9 +9,6 @@ import java.io.File;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-/**
- * Created by nishant on 12/10/16.
- */
 public class StartingSteps extends BaseSteps {
 
     @Before
@@ -23,7 +20,6 @@ public class StartingSteps extends BaseSteps {
         //mandatory capabilities
         capabilities.setCapability("deviceName", "Android");
         capabilities.setCapability("platformName", "Android");
-        capabilities.setCapability("orientation", "PORTRAIT");
 
         //other caps
         capabilities.setCapability("app", app.getAbsolutePath());
